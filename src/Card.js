@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 
 class Card extends React.Component{
     render(){
-        const{title, body}= this.props
+        const{title, body, id, deleteItem}= this.props
         return(
             <div className="card">
               <header className="card-header">
@@ -16,7 +16,7 @@ class Card extends React.Component{
               </section>
               
               <footer>
-                  Card footer 
+              <Button onClick={()=> deleteItem(id)} className="btn-danger" > delete</Button> 
               </footer>
             </div>
            
